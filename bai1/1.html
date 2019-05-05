@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.container{
+		width: 40%;
+		margin: auto;
+		background: gray;
+		height: 200px;
+	}
+		.tab{
+			background: #666666;
+			margin-right: 5px;
+			padding: 5px;
+			color: white;
+			margin-bottom: 0px;
+		}
+		div{
+			display: inline-block;
+		}
+		.section{
+			margin:0px;
+			background: white;
+			position: absolute;
+			left: 0;
+			padding: 10px;
+			width: 30%;
+			
+			
+		}
+		h3{
+			padding: 0px;
+			margin: 0px;
+		}
+		.active{
+			background: white;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="div1">
+		<p class="tab ">Tab1</p>
+		<div class="section">
+			<h3>Section 1</h3>
+			<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			</p>
+	    </div>
+
+	</div>
+	<div>
+		<p class="tab">Tab2</p>
+		<div class="section">
+			<h3>Section 2</h3>
+			<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.incididunt ut labore et dolore magna aliqua.
+			</p>
+	    </div>
+	</div>
+	<div>
+		<p class="tab active">Tab3</p>
+		<div class="section">
+			<h3>Section 3</h3>
+			<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			</p>
+	    </div>
+	</div>
+</div>
+
+
+	<!-- <script>
+		var tab=document.getElementsByClassName('tab');
+		var section=document.getElementsByClassName('section');
+		
+		for (var i = 0; i < tab.length; i++) {
+			tab[i].addEventListener('click',function  () {
+				
+		})
+		
+		for (var i = 0; i < tab.length; i++) {
+			tab[i].addEventListener('click', function  () {
+				
+				for (var j = 0; j < section.length; j++) {
+					section[j].style.display="none";
+				}
+	
+				this.nextElementSibling.style.display="block";
+			})
+		}
+	</script> -->
+
+	<script type="text/javascript">
+    var buttons = document.getElementsByClassName('tab');
+    var contents = document.getElementsByClassName('section');
+    function showContent(id){
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'block';
+        }
+        var content = document.getElementById(id);
+        content.style.display = 'none';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function(){
+            var id = this.textContent;
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            this.className += " active";
+            showContent(id);
+        });
+    }
+   
+    for (var i = 0; i < buttons.length; i++) {
+			buttons[i].addEventListener('click', function  () {
+				
+				for (var j = 0; j < contents.length; j++) {
+					contents[j].style.display="none";
+				}
+	
+				this.nextElementSibling.style.display="block";
+			})
+		}
+
+</script>
+</body>
+</html>
+
+<!-- // git add .
+git commit -m "tên commit"
+git push origin master -->

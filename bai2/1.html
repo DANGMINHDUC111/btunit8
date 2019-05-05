@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		body{margin-left: 50px;}
+		.input{
+			display: inline-block;
+			border: 1px solid gray;
+			border-right: none;
+			padding: 10px;
+			
+		}
+		.chu{
+			display: inline-block;
+			border: 1px solid gray;
+			padding: 10px;
+			margin-left: -5px;
+			
+		}
+		
+		p{
+			display: inline-block;
+			
+			margin-left: 0px;
+		}
+		div{
+			 background: #adbddf;
+			 display: inline-block;
+		}
+		div:hover .chu{
+			background: #4bdc67;
+		}
+		div:hover .input{
+			background: #4bdc67;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<div class="input"><input type="checkbox"></div>
+		<div class="chu"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p></div>
+	</div>
+	<div>
+		<div class="input"><input type="checkbox"></div>
+		<div class="chu"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p></div>
+	</div>
+	<div>
+		<div class="input"><input type="checkbox"></div>
+		<div class="chu"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p></div>
+	</div>
+	<div>
+		<div class="input"><input type="checkbox"></div>
+		<div class="chu"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p></div>
+	</div>
+	<div>
+		<div class="input"><input type="checkbox"></div>
+		<div class="chu"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p></div>
+	</div>
+	<div>
+		<div class="input"><input type="checkbox"></div>
+		<div class="chu"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p></div>
+	</div>
+	<div>
+		<div class="input"><input type="checkbox"></div>
+		<div class="chu"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p></div>
+	</div>
+	<br>
+	<button class="checkall">checkall</button>
+	<button class="uncheckall">uncheckall</button>
+	<script>
+		var input=document.getElementsByTagName('input');
+		document.getElementsByClassName('checkall')[0].addEventListener('click',function  () {
+			 for (var i = input.length - 1; i >= 0; i--) {
+			 	input[i].checked=true;
+			 }
+		})
+
+		document.getElementsByClassName('uncheckall')[0].addEventListener('click',function  () {
+			 for (var i = input.length - 1; i >= 0; i--) {
+			 	input[i].checked=false;
+			 }
+		})
+	</script>
+</body>
+</html>
